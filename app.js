@@ -5,6 +5,12 @@ var mongoose   = require('mongoose');
 var path       = require('path');
 
 
+
+
+
+
+
+
 mongoose.connect(process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGODB);
 
 var app = express();
