@@ -24,6 +24,10 @@ app.get('/config', homeController.config);
 app.post('/createUser', homeController.createUser);
 app.post('/addHappiness', homeController.addHappiness);
 
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
+
 process.stdin.resume();
 process.stdin.on('data', homeController.sendPin);
 
