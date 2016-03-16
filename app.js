@@ -5,7 +5,7 @@ var mongoose   = require('mongoose');
 var path       = require('path');
 
 
-mongoose.connect(process.env.MONGODB);
+mongoose.connect(process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGODB);
 
 var app = express();
 app.set('ip_address', (process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'));
