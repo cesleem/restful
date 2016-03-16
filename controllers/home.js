@@ -95,7 +95,7 @@ exports.sendPin = function() {
     "actions": [{
       "type": "http",
       "title": "Happier",
-      "url": "http://5c417288.ngrok.io/addHappiness",
+      "url": "http://restfulapp-cesleem.rhcloud.com/addHappiness",
       "method": "POST",
       "headers": {
         "Content-Type": "application/json"
@@ -106,7 +106,7 @@ exports.sendPin = function() {
     }, {
       "type": "http",
       "title": "Happy",
-      "url": "http://cesleem.ngrok.io/addHappiness",
+      "url": "http://restfulapp-cesleem.rhcloud.com/addHappiness",
       "method": "POST",
       "headers": {
         "Content-Type": "application/json"
@@ -117,7 +117,7 @@ exports.sendPin = function() {
     }, {
       "type": "http",
       "title": "Netural",
-      "url": "http://cesleem.ngrok.io/addHappiness",
+      "url": "http://restfulapp-cesleem.rhcloud.com/addHappiness",
       "method": "POST",
       "headers": {
         "Content-Type": "application/json"
@@ -128,7 +128,7 @@ exports.sendPin = function() {
     }, {
       "type": "http",
       "title": "Sad",
-      "url": "http://cesleem.ngrok.io/addHappiness",
+      "url": "http://restfulapp-cesleem.rhcloud.com/addHappiness",
       "method": "POST",
       "headers": {
         "Content-Type": "application/json"
@@ -139,7 +139,7 @@ exports.sendPin = function() {
     }, {
       "type": "http",
       "title": "Sadder",
-      "url": "http://kirby.ngrok.io/addHappiness",
+      "url": "http://restfulapp-cesleem.rhcloud.com/addHappiness",
       "method": "POST",
       "headers": {
         "Content-Type": "application/json"
