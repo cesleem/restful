@@ -1,0 +1,20 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "cesleem@gmail.com",
+    "enableMultiJS": true,
+    "longName": "restful",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "3",
+    "shortName": "restful",
+    "uuid": "3c626cc5-233f-4c95-a915-4f9b45550e1a",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
