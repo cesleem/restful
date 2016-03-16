@@ -36,5 +36,5 @@ process.stdin.resume();
 process.stdin.on('data', homeController.sendPin);
 
 var server = app.listen(app.get('port'), app.get('ip'), function () {
-  console.log('happiness-meter-server listening on port %s', app.get('port'));
+  console.log('restful listening on port %s', app.get('port'));
 });
