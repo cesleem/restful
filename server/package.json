@@ -1,0 +1,22 @@
+{
+  "name": "happiness-meter-server",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "async": "^1.4.0",
+    "body-parser": "^1.12.4",
+    "dotenv": "^1.2.0",
+    "express": "^4.0.0",
+    "jade": "^1.11.0",
+    "moment": "^2.10.5",
+    "mongoose": "^4.0.6",
+    "pebble-api": "^0.2.1"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "license": "MIT"
+}

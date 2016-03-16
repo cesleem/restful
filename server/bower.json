@@ -1,0 +1,16 @@
+{
+  "name": "happy-meter-server",
+  "version": "1.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chartist": "~0.9.1",
+    "pebble-slate": "~0.0.1"
+  }
+}

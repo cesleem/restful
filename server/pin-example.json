@@ -1,0 +1,15 @@
+{
+  "id": "clp",
+  "time": "2016-03-11T01:53:20.04Z",
+  "layout": {
+    "type": "genericPin",
+    "title": "Timeline!"
+  },
+  "createNotification": {
+    "layout": {
+      "type": "genericNotification",
+      "title": "Created!",
+      "body": "This is a pin notification."
+    }
+  }
+}

@@ -1,0 +1,45 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Your Happy Chart
+    link(rel='stylesheet', type='text=css', href='/vendor/pebble-slate/dist/css/slate.min.css')
+    link(rel='stylesheet', type='text=css', href='/vendor/chartist/dist/chartist.min.css')
+    link(rel='stylesheet', type='text=css', href='/assets/css/style.css')
+  body
+    .item-container
+      .item-container-header Your Happiness Today
+      .item-container-content
+        .item
+          // Here you want to add logic to display a message
+          // if the user doesn't have enough happinesses
+          // logged for the day. If they do, then create a
+          // div for Chartist to bind to.
+
+    .item-container
+      .item-container-header Your Happiest Days
+      .item-container-content
+        // Here you want to add logic to display a message
+        // if the user doesn't have enough happy days
+        // logged. If they do, then iterrate over them and
+        // display each day an its average happiness.
+    .item-container
+      .item-container-header Your Saddest Days
+      .item-container-content
+        // Here you want to add logic to display a message
+        // if the user doesn't have enough sad days
+        // logged. If they do, then iterrate over them and
+        // display each day an its average happiness.
+
+    script(type='text/javascript', src='/vendor/pebble-slate/dist/js/slate.min.js')
+    script(type='text/javascript', src='/vendor/chartist/dist/chartist.min.js')
+
+    script(type='text/javascript').
+      /**********************************
+       * Here you need to add code that uses
+       * the Chartist library, and creates
+       * a graph for the user's happinesses
+       * today.
+       **********************************/
