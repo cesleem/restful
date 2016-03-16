@@ -8,7 +8,8 @@ var path       = require('path');
 mongoose.connect(process.env.MONGODB);
 
 var app = express();
-app.set('port', (process.env.PORT || 5000));
+app.set('ip_address', (process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'));
+app.set('port', (process.env.OPENSHIFT_NODEJS_PORT || 5000));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.locals.moment = require('moment');
@@ -26,6 +27,6 @@ app.post('/addHappiness', homeController.addHappiness);
 process.stdin.resume();
 process.stdin.on('data', homeController.sendPin);
 
-var server = app.listen(app.get('port'), function () {
+var server = app.listen(app.get('port'), app.get('ip_address'), function () {
   console.log('happiness-meter-server listening on port %s', app.get('port'));
 });

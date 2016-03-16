@@ -1,10 +1,10 @@
 {
-  "name": "happiness-meter-server",
+  "name": "restful",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
-  },
+  ,
   "dependencies": {
     "async": "^1.4.0",
     "body-parser": "^1.12.4",
