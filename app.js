@@ -4,13 +4,6 @@ var bodyParser = require('body-parser');
 var mongoose   = require('mongoose');
 var path       = require('path');
 
-
-
-
-
-
-
-
 mongoose.connect(process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGODB);
 
 var app = express();
@@ -29,7 +22,7 @@ var homeController = require('./controllers/home');
 app.get('/config', homeController.config);
 app.post('/createUser', homeController.createUser);
 app.post('/addHappiness', homeController.addHappiness);
-
+app.post('/addSleepSurvey', homeController.addSleepSurvey);
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });

@@ -1,4 +1,4 @@
-var API_ROOT = 'https://cesleem.ngrok.io';
+var API_ROOT = 'https://restfulapp-cesleem.rhcloud.com';
 var timelineToken = "SBLm6QquLtq7BXIBXZl18tj9jfxJaCGe";
 
 Pebble.addEventListener("showConfiguration", function() {

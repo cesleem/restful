@@ -2,6 +2,36 @@ var async       = require('async');
 var Timeline    = require('pebble-api');
 var DailyLevel  = require('../models/DailyLevel');
 
+
+exports.addSleepSurvey = function(req, res) {
+  var survey;
+
+  console.log('request', req.body.survey);
+
+  insertSurvey(process.env.TIMELINE_TOKEN, happiness, function() {
+    console.log('added survey');
+    res.send('ok');
+  });
+};
+
+function insertSurvey(timelineToken, happiness, callback) {
+  var updateDoc = { '$set' : { } };
+  updateDoc.$set['hourly_levels.' + currentHour()] = survey[0];
+
+  var match = {timelineToken: timelineToken, date: getDay(0) }; 
+
+  DailyLevel.collection.update(match, updateDoc, function(err, dailyLevel) {
+    if (err) {
+      console.log(err);
+      return;
+    }
+
+    callback();
+  });
+}
+
+
+
 var timeline = new Timeline();
 
 exports.config = function(req, res) {
