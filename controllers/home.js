@@ -5,13 +5,13 @@ var DailyLevel  = require('../models/DailyLevel');
 
 exports.addSleepSurvey = function(req, res) {
   var survey;
-
+  res.send('ok');
   console.log('request', req.body.survey);
 
-  insertSurvey(process.env.TIMELINE_TOKEN, happiness, function() {
-    console.log('added survey');
-    res.send('ok');
-  });
+  // insertSurvey(process.env.TIMELINE_TOKEN, happiness, function() {
+  //   console.log('added survey');
+  //   res.send('ok');
+  // });
 };
 
 function insertSurvey(timelineToken, happiness, callback) {
