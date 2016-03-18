@@ -5,13 +5,25 @@ var DailyLevel  = require('../models/DailyLevel');
 
 exports.addSleepSurvey = function(req, res) {
   var survey;
-  res.send({});
   console.log('request', req.body.survey);
 
-  // insertSurvey(process.env.TIMELINE_TOKEN, happiness, function() {
-  //   console.log('added survey');
-  //   res.send('ok');
-  // });
+  insertSurvey(process.env.TIMELINE_TOKEN, survey, function() {
+    var updateDoc = { '$set' : { } };
+    updateDoc.$set['hourly_levels.' + currentHour()] = survey;
+
+    var match = {timelineToken: timelineToken, date: getDay(0) }; 
+
+    DailyLevel.collection.update(match, updateDoc, function(err, dailyLevel) {
+      if (err) {
+        console.log(err);
+        return;
+      }
+
+      callback();
+    });
+    console.log('added survey');
+    res.send({});
+  });
 };
 
 function insertSurvey(timelineToken, happiness, callback) {
