@@ -4,20 +4,30 @@ var DailyLevel  = require('../models/DailyLevel');
 var SleepSurvey  = require('../models/SleepSurvey');
 
 
+// SleepSurvey.find({},
+//         function(err, data){
+//           if (err){
+//               console.log('error occured');
+//           }
+//             // res.send('My ninjas are:\n');
+//           console.log(data); 
+//       });
+
+
 exports.addSleepSurvey = function(req, res) {
   var survey = req.body;
   SleepSurvey.collection.insert(survey,
     function(success) {
       console.log('created sleep docs');
       // console.log('request', survey);
-      SleepSurvey.collection.find({},
-        function(err, data){
-          if (err){
-              console.log('error occured');
+      SleepSurvey.find({}).exec(
+        function(err, surveys){
+          if(err) {
+            console.log('err', err);
+          } else{
+            console.log(surveys);
           }
-            // res.send('My ninjas are:\n');
-          console.log(data); 
-      });
+        });
       res.sendStatus(200);
     }, 
     function(err) {
