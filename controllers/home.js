@@ -15,6 +15,7 @@ function insertSurvey(survey, callback) {
   SleepSurvey.collection.insert(survey, {}, function(err) {
     if (err) {
       console.log(err);
+      console.log('request', req.body);
     }
     console.log('created sleep docs');
     console.log('request', req.body);

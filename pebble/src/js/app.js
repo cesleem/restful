@@ -1,8 +1,8 @@
 var UI = require('ui');
 var ajax = require('ajax');
 
-var API_ROOT_URL = 'http://localhost:5000/addSleepSurvey';
-// var API_ROOT_URL = 'http://restfulapp-cesleem.rhcloud.com/addSleepSurvey';
+// var API_ROOT_URL = 'http://localhost:5000/addSleepSurvey';
+var API_ROOT_URL = 'http://restfulapp-cesleem.rhcloud.com/addSleepSurvey';
 
 Pebble.addEventListener("showConfiguration", function() {
   console.log('open config');
