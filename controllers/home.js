@@ -25,7 +25,7 @@ exports.addSleepSurvey = function(req, res) {
           if(err) {
             console.log('err', err);
           } else{
-            console.log(surveys);
+            console.log(JSON.parse(JSON.stringify(surveys)));
           }
         });
       res.sendStatus(200);
