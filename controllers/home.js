@@ -6,7 +6,17 @@ var SleepSurvey  = require('../models/SleepSurvey');
 
 exports.addSleepSurvey = function(req, res) {
   var survey = req.body;
-  console.log('request', req.body);
+  SleepSurvey.collection.insert(survey,
+    function(success) {
+      console.log('created sleep docs');
+      // console.log('request', survey);
+      SleepSurvey.collection.find()
+      res.sendStatus(200);
+    }, 
+    function(err) {
+        console.log(err);
+        console.log('request', req.body);
+  });
     // insertSurvey(survey, function() {
     // });
   // console.log('added survey');
