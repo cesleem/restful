@@ -1,3 +1,6 @@
+//start db
+// mongod --dbpath ~/pebble
+
 var mongoose = require('mongoose'), 
     Schema = mongoose.Schema;
 

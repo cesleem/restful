@@ -1,20 +1,45 @@
 {
-    "appKeys": {},
-    "capabilities": [
-        ""
-    ],
-    "companyName": "cesleem@gmail.com",
-    "enableMultiJS": true,
-    "longName": "restful",
-    "projectType": "native",
-    "resources": {
-        "media": []
-    },
-    "sdkVersion": "3",
-    "shortName": "restful",
-    "uuid": "3c626cc5-233f-4c95-a915-4f9b45550e1a",
-    "versionLabel": "1.0",
-    "watchapp": {
-        "watchface": false
-    }
+  "appKeys": {},
+  "capabilities": [
+    "configurable"
+  ],
+  "companyName": "cesleem@gmail.com",
+  "longName": "restful",
+  "resources": {
+    "media": [
+      {
+        "file": "images/freed_menu_icon.png",
+        "menuIcon": true,
+        "name": "IMAGE_MENU_ICON",
+        "type": "bitmap"
+      },
+      {
+        "file": "images/logo_splash.png",
+        "name": "IMAGE_LOGO_SPLASH",
+        "type": "bitmap"
+      },
+      {
+        "file": "images/tile_splash.png",
+        "name": "IMAGE_TILE_SPLASH",
+        "type": "bitmap"
+      },
+      {
+        "file": "fonts/UbuntuMono-Regular.ttf",
+        "name": "MONO_FONT_14",
+        "type": "font"
+      }
+    ]
+  },
+  "sdkVersion": "3",
+  "shortName": "restful",
+  "targetPlatforms": [
+    "basalt",
+    "chalk"
+  ],
+  "uuid": "3c626cc5-233f-4c95-a915-4f9b45550e1a",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": false
+  }
 }
