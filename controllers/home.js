@@ -10,7 +10,7 @@ exports.addSleepSurvey = function(req, res) {
     function(success) {
       console.log('created sleep docs');
       // console.log('request', survey);
-      SleepSurvey.collection.find()
+      console.log(SleepSurvey.collection.find().pretty())
       res.sendStatus(200);
     }, 
     function(err) {
