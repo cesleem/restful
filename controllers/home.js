@@ -40,7 +40,7 @@ exports.addSleepSurvey = function(req, res) {
 
 //     callback();
 //   });
-}
+// }
 
 // exports.createUser = function(req, res) {
 //   var dailyLevels = [];
