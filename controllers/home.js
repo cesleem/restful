@@ -10,7 +10,17 @@ exports.addSleepSurvey = function(req, res) {
     function(success) {
       console.log('created sleep docs');
       // console.log('request', survey);
-      console.log(SleepSurvey.collection.find());
+      SleepSurvey.find({},
+        function(res){
+        return function(err, data){
+          if (err){
+              console.log('error occured');
+              return;
+          }
+            // res.send('My ninjas are:\n');
+          console.log(data); 
+        }
+    });
       res.sendStatus(200);
     }, 
     function(err) {
