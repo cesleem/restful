@@ -6,21 +6,22 @@ var SleepSurvey  = require('../models/SleepSurvey');
 
 exports.addSleepSurvey = function(req, res) {
   var survey = req.body;
-    insertSurvey(survey, function() {
-  });
-  console.log('added survey');
+  console.log('request', req.body);
+    // insertSurvey(survey, function() {
+    // });
+  // console.log('added survey');
 };
 
-function insertSurvey(survey, callback) {
-  SleepSurvey.collection.insert(survey, {}, function(err) {
-    if (err) {
-      console.log(err);
-      console.log('request', req.body);
-    }
-    console.log('created sleep docs');
-    console.log('request', req.body);
-    res.sendStatus(200);
-  });
+// function insertSurvey(survey, callback) {
+//   SleepSurvey.collection.insert(survey, {}, function(err) {
+//     if (err) {
+//       console.log(err);
+//       console.log('request', req.body);
+//     }
+//     console.log('created sleep docs');
+//     console.log('request', req.body);
+//     res.sendStatus(200);
+//   });
 // TODO update with unique time, userid
   // SleepSurvey.collection.createIndex({date: 1}, {unique: true}, function(err) {
   //   console.log(err);
