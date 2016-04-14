@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 var UI = require('ui');
 var ajax = require('ajax');
 
 // var API_ROOT_URL = 'http://localhost:5000/addSleepSurvey';
 var API_ROOT_URL = 'http://restfulapp-cesleem.rhcloud.com/addSleepSurvey';
+=======
+var API_ROOT = 'https://cesleem.ngrok.io';
+var timelineToken = "SBLm6QquLtq7BXIBXZl18tj9jfxJaCGe";
+>>>>>>> 9d5e2a20a5cb91f3ddd293ef61b5be91ed956c56
 
 Pebble.addEventListener("showConfiguration", function() {
   console.log('open config');
@@ -13,6 +18,7 @@ Pebble.addEventListener("showConfiguration", function() {
 });
 
 Pebble.addEventListener('ready', function() {
+<<<<<<< HEAD
   doTimeline();
 });
 
@@ -38,6 +44,19 @@ var doTimeline = function(packages) {
 //     console.log('Error getting timeline token: ' + err);
 //   });
 // });
+=======
+  timelineToken = token;
+  console.log('js is ready');
+  console.log('my timeline token is: ' + timelineToken);
+
+  Pebble.getTimelineToken(function(token) {
+    timelineToken = token;
+    console.log(token);
+  }, function(err) {
+    console.log('Error getting timeline token: ' + err);
+  });
+});
+>>>>>>> 9d5e2a20a5cb91f3ddd293ef61b5be91ed956c56
 
 function createUserOnServer(token) {
   var xhr = new XMLHttpRequest();
@@ -47,6 +66,7 @@ function createUserOnServer(token) {
     timelineToken: token
   }));
 }
+<<<<<<< HEAD
 
 
 
@@ -141,3 +161,5 @@ function sendResults(url, quality, disturbance) {
 };
 
 
+=======
+>>>>>>> 9d5e2a20a5cb91f3ddd293ef61b5be91ed956c56

@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 import json
 import os
 import re
 
 from waflib.Configure import conf
+=======
+#
+# This file is the default set of rules to compile a Pebble project.
+#
+# Feel free to customize this to your needs.
+#
+
+import os.path
+>>>>>>> 9d5e2a20a5cb91f3ddd293ef61b5be91ed956c56
 
 top = '.'
 out = 'build'
@@ -11,14 +21,18 @@ out = 'build'
 def options(ctx):
     ctx.load('pebble_sdk')
 
+<<<<<<< HEAD
     ctx.load('aplite_legacy', tooldir='waftools')
     ctx.load('configure_appinfo', tooldir='waftools')
     ctx.load('pebble_sdk_version', tooldir='waftools')
 
+=======
+>>>>>>> 9d5e2a20a5cb91f3ddd293ef61b5be91ed956c56
 
 def configure(ctx):
     ctx.load('pebble_sdk')
 
+<<<<<<< HEAD
     ctx.configure_appinfo([ctx.appinfo_bitmap_to_png])
 
     if ctx.env.TARGET_PLATFORMS:
@@ -27,10 +41,13 @@ def configure(ctx):
     else:
         ctx.configure_platform()
 
+=======
+>>>>>>> 9d5e2a20a5cb91f3ddd293ef61b5be91ed956c56
 
 def build(ctx):
     ctx.load('pebble_sdk')
 
+<<<<<<< HEAD
     binaries = []
     js_target = ctx.concat_javascript(js_path='src/js')
 
@@ -168,3 +185,23 @@ def concat_javascript(ctx, js_path=None):
     return js_target
 
 # vim:filetype=python
+=======
+    build_worker = os.path.exists('worker_src')
+    binaries = []
+
+    for p in ctx.env.TARGET_PLATFORMS:
+        ctx.set_env(ctx.all_envs[p])
+        ctx.set_group(ctx.env.PLATFORM_NAME)
+        app_elf = '{}/pebble-app.elf'.format(ctx.env.BUILD_DIR)
+        ctx.pbl_program(source=ctx.path.ant_glob('src/**/*.c'), target=app_elf)
+
+        if build_worker:
+            worker_elf = '{}/pebble-worker.elf'.format(ctx.env.BUILD_DIR)
+            binaries.append({'platform': p, 'app_elf': app_elf, 'worker_elf': worker_elf})
+            ctx.pbl_worker(source=ctx.path.ant_glob('worker_src/**/*.c'), target=worker_elf)
+        else:
+            binaries.append({'platform': p, 'app_elf': app_elf})
+
+    ctx.set_group('bundle')
+    ctx.pbl_bundle(binaries=binaries, js=ctx.path.ant_glob('src/js/**/*.js'), js_entry_file='src/js/app.js')
+>>>>>>> 9d5e2a20a5cb91f3ddd293ef61b5be91ed956c56

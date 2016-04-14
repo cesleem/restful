@@ -11,11 +11,7 @@ const PebbleProcessInfo __pbl_app_info __attribute__ ((section (".pbl_header")))
   .crc = 0xb6b6b6b6,
   .name = "restful",
   .company = "cesleem@gmail.com",
-<<<<<<< HEAD
-  .icon_resource_id = RESOURCE_ID_IMAGE_MENU_ICON,
-=======
   .icon_resource_id = DEFAULT_MENU_ICON,
->>>>>>> 9d5e2a20a5cb91f3ddd293ef61b5be91ed956c56
   .sym_table_addr = 0xA7A7A7A7,
   .flags = 0,
   .num_reloc_entries = 0xdeadcafe,

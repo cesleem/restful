@@ -4,7 +4,11 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
+<<<<<<< HEAD
   },
+=======
+  ,
+>>>>>>> 9d5e2a20a5cb91f3ddd293ef61b5be91ed956c56
   "dependencies": {
     "async": "^1.4.0",
     "body-parser": "^1.12.4",

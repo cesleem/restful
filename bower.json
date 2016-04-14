@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "restful",
+=======
+  "name": "happy-meter-server",
+>>>>>>> 9d5e2a20a5cb91f3ddd293ef61b5be91ed956c56
   "version": "1.0.0",
   "license": "MIT",
   "ignore": [

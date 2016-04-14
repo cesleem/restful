@@ -18,23 +18,25 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 var homeController = require('./controllers/home');
-app.post('/addSleepSurvey', homeController.addSleepSurvey);
+
+app.get('/process', function (req, res) {
+    res.json(process.env);
+});
+
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-app.get('/process', function (req, res) {
-	res.json(process.env);
-});
+app.post('/addSleepSurvey', homeController.addSleepSurvey);
 
-// process.stdin.resume();
-// process.stdin.on('data', homeController.sendPin);
+app.get('/config', homeController.config);
+app.post('/createUser', homeController.createUser);
+app.post('/addHappiness', homeController.addHappiness);
+
+process.stdin.resume();
+process.stdin.on('data', homeController.sendPin);
 
 var server = app.listen(app.get('port'), app.get('ip'), function () {
   console.log('restful listening on port %s:%d', app.get('ip'), app.get('port'));
 });
 
-
-// app.get('/config', homeController.config);
-// app.post('/createUser', homeController.createUser);
-// app.post('/addHappiness', homeController.addHappiness);

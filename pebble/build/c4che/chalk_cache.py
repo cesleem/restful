@@ -10,7 +10,11 @@ CC_NAME = 'gcc'
 CC_SRC_F = []
 CC_TGT_F = ['-c', '-o']
 CC_VERSION = ('4', '7', '2')
+<<<<<<< HEAD
 CFLAGS = ['-mcpu=cortex-m3', '-mthumb', '-ffunction-sections', '-fdata-sections', '-g', '-Os', '-D_TIME_H_', '-Wall', '-Wextra', '-Werror', '-Wno-unused-parameter', '-Wno-error=unused-function', '-Wno-error=unused-variable', '-std=c11', '-fms-extensions', '-Wno-address', '-Wno-type-limits', '-Wno-missing-field-initializers']
+=======
+CFLAGS = ['-std=c99', '-mcpu=cortex-m3', '-mthumb', '-ffunction-sections', '-fdata-sections', '-g', '-Os', '-D_TIME_H_', '-Wall', '-Wextra', '-Werror', '-Wno-unused-parameter', '-Wno-error=unused-function', '-Wno-error=unused-variable']
+>>>>>>> 9d5e2a20a5cb91f3ddd293ef61b5be91ed956c56
 CFLAGS_MACBUNDLE = ['-fPIC']
 CFLAGS_cshlib = ['-fPIC']
 CPPPATH_ST = '-I%s'
@@ -44,7 +48,11 @@ SONAME_ST = '-Wl,-h,%s'
 STLIBPATH_ST = '-L%s'
 STLIB_MARKER = None
 STLIB_ST = '-l%s'
+<<<<<<< HEAD
 TARGET_PLATFORMS = [u'chalk', u'basalt']
+=======
+TARGET_PLATFORMS = ['chalk', 'basalt', 'aplite']
+>>>>>>> 9d5e2a20a5cb91f3ddd293ef61b5be91ed956c56
 cprogram_PATTERN = '%s'
 cshlib_PATTERN = 'lib%s.so'
 cstlib_PATTERN = 'lib%s.a'
